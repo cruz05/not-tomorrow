@@ -1,0 +1,41 @@
+.task-display {
+  width: 70vw;
+  min-height: 100px;
+  margin: 0.8em auto;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem rgb(0, 0, 0) solid;
+  border-radius: 2px;
+}
+
+.Task {
+  min-width: 290px;
+  max-width: 80%;
+  min-height: 60px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 10% 80% 10%;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-tertiary);
+  border-left: 3px solid var(--color-tertiary);
+  border-bottom: 3px solid var(--color-tertiary);
+  margin: 0.3em 0.5em;
+  background-color: hsl(227, 100%, 95%);
+}
+
+.data {
+  margin: 0 0.3rem;
+  font-size: 0.9rem;
+}
+
+.edit-icon,
+.status-icon {
+  color: hsl(0, 0%, 60%);
+  cursor: pointer;
+}
+
+.status-icon {
+  font-size: 1.2rem;
+}

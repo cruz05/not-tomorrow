@@ -1,0 +1,47 @@
+:root {
+  --color-primary: hsl(41, 100%, 56%);
+  --color-secondary: hsl(231, 100%, 50%);
+  --color-tertiary: hsl(226, 100%, 45%);
+  --mint-cream: hsl(120, 24%, 96%);
+  --color-blue: hsl(198, 52%, 37%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--color-primary);
+  position: relative;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 3em;
+  line-height: 1.1;
+}
+
+.text {
+  font-weight: 200;
+  text-align: center;
+  font-size: 1.3em;
+  line-height: 1.1;
+  max-width: 40ch;
+  margin: 1em auto 1.5em;
+}

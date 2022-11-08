@@ -1,0 +1,117 @@
+.container {
+  min-width: 90vw;
+}
+
+.container-header {
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.date {
+  font-size: 1.2rem;
+}
+
+.btn-create-task {
+  color: hsl(0, 0%, 100%);
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 0.4rem;
+  padding: 0.7em 2.6em;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.container-create-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.263);
+}
+
+.form-create-task {
+  width: 450px;
+  padding: 1.5rem 1rem;
+  margin: 0 auto;
+  background-color: var(--mint-cream);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.form-task {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0.8em auto;
+}
+
+.task-name,
+.task-notes,
+.task-date,
+.task-time {
+  padding: 0.4rem 0.5rem;
+  /* min-width: 60%; */
+  width: 400px;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 2px solid var(--color-secondary);
+  outline: none;
+  font-size: 0.9rem;
+  background-color: transparent;
+  color: var(--color-secondary);
+}
+
+.task-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.task-notes {
+  margin: 1em 0;
+  resize: none;
+  min-height: 60px;
+}
+
+.task-Name::placeholder {
+  color: var(--color-secondary);
+}
+
+.btn-options {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.3rem;
+  padding-right: 1rem;
+}
+
+.btn-submit {
+  text-decoration: none;
+  color: var(--mint-cream);
+  background-color: var(--color-tertiary);
+  border: 2px solid var(--color-tertiary);
+  border-radius: 0.4rem;
+  border-color: var(--color-tertiary);
+  padding: 0.5em 1.5em;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-close {
+  border: 2px solid var(--color-tertiary);
+  border-radius: 0.4rem;
+  border-color: var(--color-tertiary);
+  padding: 0.5em 1.5em;
+  font-size: 0.9em;
+  font-weight: bold;
+  background-color: transparent;
+  color: var(--color-secondary);
+  cursor: pointer;
+  margin-right: 1rem;
+}

@@ -7,14 +7,22 @@
   font-size: 1.4rem;
 }
 
+.date-display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+}
+
 .date {
   font-size: 1.2rem;
 }
 
 .btn-create-task {
   color: hsl(0, 0%, 100%);
-  background-color: var(--color-blue);
-  border: 1px solid var(--color-blue);
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
   border-radius: 0.4rem;
   padding: 0.7em 2.6em;
   font-size: 0.9em;
@@ -104,9 +112,9 @@
 }
 
 .btn-close {
-  border: 2px solid var(--color-tertiary);
+  border: 2px solid var(--color-secondary);
   border-radius: 0.4rem;
-  border-color: var(--color-tertiary);
+  border-color: var(--color-secondary);
   padding: 0.5em 1.5em;
   font-size: 0.9em;
   font-weight: bold;

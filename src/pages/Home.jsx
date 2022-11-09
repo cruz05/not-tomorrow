@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import { TaskList } from "../components/TaskList";
 import "../styles/AddTask.css";
+import "../styles/Task.css";
 
 function Home() {
   const [tasks, setTasks] = useState([]);
@@ -31,10 +32,10 @@ function Home() {
       <Header counter={counter} />
       <div className="date-display">
         <p className="date">{date}</p>
+        <button className="btn-create-task" onClick={() => setModal(true)}>
+          Create task
+        </button>
       </div>
-      <button className="btn-create-task" onClick={() => setModal(true)}>
-        Create task
-      </button>
 
       {modal && (
         <AddTask onAdd={addTask} closeModal={closeModal} />

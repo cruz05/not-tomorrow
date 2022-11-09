@@ -1,12 +1,15 @@
 :root {
   --color-primary: hsl(41, 100%, 56%);
-  --color-secondary: hsl(231, 100%, 50%);
+  /* --color-secondary: hsl(231, 100%, 50%); */
   --color-tertiary: hsl(226, 100%, 45%);
   --mint-cream: hsl(120, 24%, 96%);
-  --color-blue: hsl(198, 52%, 37%);
+  --color-secondary: hsl(198, 52%, 37%);
+  --color-gray: hsl(199, 14%, 35%);
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -44,4 +47,9 @@ body {
   line-height: 1.1;
   max-width: 40ch;
   margin: 1em auto 1.5em;
+}
+
+.app-name {
+  font-weight: 600;
+  text-transform: uppercase;
 }

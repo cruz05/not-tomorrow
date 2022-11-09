@@ -6,14 +6,13 @@
   flex-flow: wrap row;
   justify-content: center;
   align-items: center;
-  border: 0.1rem rgb(0, 0, 0) solid;
-  border-radius: 2px;
 }
 
-.Task {
-  min-width: 290px;
+.task-card {
+  user-select: none;
+  min-width: 340px;
   max-width: 80%;
-  min-height: 60px;
+  min-height: 80px;
   display: grid;
   align-items: center;
   grid-template-columns: 10% 80% 10%;
@@ -25,9 +24,33 @@
   background-color: hsl(227, 100%, 95%);
 }
 
-.data {
-  margin: 0 0.3rem;
-  font-size: 0.9rem;
+.task-data {
+  margin: 0 0.8rem;
+}
+
+.task-card-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.inactive {
+  text-decoration: line-through;
+  color: var(--color-gray);
+}
+
+.task-card-notes {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-gray);
+}
+
+.task-card-time {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: -0.3rem;
+  color: var(--color-gray);
 }
 
 .edit-icon,
@@ -37,5 +60,5 @@
 }
 
 .status-icon {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }

@@ -1,55 +1,72 @@
-:root {
-  --color-primary: hsl(41, 100%, 56%);
-  /* --color-secondary: hsl(231, 100%, 50%); */
-  --color-tertiary: hsl(226, 100%, 45%);
-  --mint-cream: hsl(120, 24%, 96%);
-  --color-secondary: hsl(198, 52%, 37%);
-  --color-gray: hsl(199, 14%, 35%);
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   padding: 0;
   display: grid;
   place-items: center;
-  min-width: 100vw;
-  min-height: 100vh;
-  background-color: var(--color-primary);
-  position: relative;
+  color: var(--color-tertiary);
+  background-color: var(--dark-bg);
 }
 
 .App {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-inline: auto;
+  width: 60rem;
+}
+
+header {
+  margin-bottom: 1.7rem;
 }
 
 .title {
-  text-align: center;
-  font-size: 3em;
-  line-height: 1.1;
-}
-
-.text {
-  font-weight: 200;
-  text-align: center;
-  font-size: 1.3em;
-  line-height: 1.1;
-  max-width: 40ch;
-  margin: 1em auto 1.5em;
+  font-weight: 500;
+  font-size: 2rem;
 }
 
 .app-name {
+  color: var(--color-secondary);
   font-weight: 600;
   text-transform: uppercase;
+}
+
+header p {
+  font-weight: 500;
+  font-size: 4rem;
+}
+
+.disabled {
+  display: none;
+}
+
+.date {
+  font-size: 1.5rem;
+}
+
+.btn-create-task {
+  font-size: 1.5rem;
+  color: var(--dark-bg);
+  font-weight: 600;
+}
+
+.btn-first-task {
+  font-size: 1.6rem;
+  border: none;
+  color: var(--color-tertiary);
+  background-color: transparent;
+}
+
+@media (max-width:750px) and (min-width: 500px) {
+  .App {
+    width: 100%;
+  }
+}
+
+@media (max-width: 501px) {
+  .App {
+    width: 80%;
+  }
+
+  header p {
+    line-height: 1.1;
+  }
 }

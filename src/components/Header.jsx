@@ -1,10 +1,8 @@
-const Header = ({counter}) => {
+export default function Header({counter}) {
   return (
-    <header className="container-header">
-        <p>Welcome to <span className="app-name">Not Tomorrow!</span></p>
-        <h1>You've got {counter} tasks today.</h1>
+    <header>
+        <h1 className="title">Welcome to <span className="app-name">Not Tomorrow</span>.</h1>
+        <p>You've got {counter} tasks today.</p>
     </header>
     )
 }
-
-export default Header

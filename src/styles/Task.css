@@ -1,64 +1,72 @@
 .tasks {
   min-height: 20rem;
-  padding: 3rem 1rem;
-  display: flex;
-  flex-flow: wrap column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
+  display: grid;
+  gap: 1.2rem;
+  place-items: center;
+  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   border-radius: 0.4rem;
-  border: 1px solid var(--color-secondary);
+  padding: 1rem 0;
   /* background-color: var(--darker-bg); */
 }
 
 .task-card {
+  width: 30rem;
   user-select: none;
-  width: 90%;
-  min-height: 80px;
   display: grid;
-  place-items: center;
-  gap: 0.3rem;
+  column-gap: 1.2rem;
   grid-template-columns: 1fr 4fr 1fr;
-  padding: 0.5rem 1rem;
+  place-items: center;
+  padding:1.5rem;
   border-style: solid;
   border-width: 1px 1px 3px 3px;
-  border-color: var(--color-secondary);
+  border-color: var(--light-green);
+  color: var(--btn-font-color);
   background-color: var(--color-tertiary);
-  border-radius: 0.4rem;
+  border-radius: 0.3rem;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .task-data {
-  margin: 0 0.8rem;
+  padding-inline: 0.6rem;
+  justify-self: start;
 }
+/* 
+.task-card:hover {
+  background-color: transparent;
+} */
+
+/* .task-card:hover *{
+  --light-green: hsl(173, 91%, 34%);
+  color: var(--light-green);
+} */
 
 .task-card-name {
-  font-size: 1.2rem;
   font-weight: 600;
-  margin: 0;
 }
 
 .inactive {
   text-decoration: line-through;
-  color: var(--color-gray);
 }
+
 .inactive-card {
-  border-color: var(--color-gray);
-  /* border-left: 3px solid var(--color-secondary);
-  border-bottom: 3px solid var(--color-secondary); */
+  color: var(--color-tertiary);
+  background-color: transparent;
+  border-color: var(--color-tertiary);
 }
 
 .task-card-notes {
   font-size: 0.8rem;
   font-weight: 400;
-  color: var(--color-gray);
 }
 
 .task-card-time {
   display: block;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: -0.2rem;
-  color: var(--color-gray);
+  color: rgb(77, 77, 77);
 }
 
 .edit-icon,
@@ -67,12 +75,8 @@
   cursor: pointer;
 }
 
-.status-icon {
-  font-size: 1.5rem;
-}
-
 .edit-icon {
-  font-size: 0.9rem;
+  font-size: 1.7rem;
 }
 
 /* @media (min-width: 900px) {

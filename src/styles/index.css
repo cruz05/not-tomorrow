@@ -7,11 +7,15 @@ body {
   background-color: var(--dark-bg);
 }
 
+#root {
+  padding-block: 4rem;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   margin-inline: auto;
-  width: 60rem;
+  width: 65rem;
 }
 
 header {
@@ -40,6 +44,7 @@ header p {
 
 .date {
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .btn-create-task {
@@ -49,10 +54,16 @@ header p {
 }
 
 .btn-first-task {
+  /* all: unset; */
+  width: 100%;
+  padding-block: 7rem;
   font-size: 1.6rem;
   border: none;
   color: var(--color-tertiary);
   background-color: transparent;
+  cursor:pointer;
+  border: 1px solid var(--color-secondary);
+
 }
 
 @media (max-width:750px) and (min-width: 500px) {

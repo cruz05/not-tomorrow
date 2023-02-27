@@ -39,47 +39,43 @@
   margin-inline: auto;
   border-radius: 0.8rem;
   padding: 2rem 2.5rem;
-  color: var(--color-tertiary);
-  background-color: var(--darker-bg);
+  background-color: var(--dark-bg);
+  font-size: 1.6rem;
 }
 
 .task-name::placeholder,
 .task-notes::placeholder {
   font-weight: 600;
-
+  color: rgb(165, 165, 165);
 }
-
-.task-name::placeholder,
-.task-notes::placeholder,
-.task-date::placeholder,
-.task-time::placeholder {
-  color: var(--color-tertiary);
-}
-
 
 .task-name,
 .task-notes,
 .task-date,
 .task-time {
-  font-size: 1.7rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
+  color: var(--color-tertiary);
   padding: 0.4rem 0.5rem;
   width: 100%;
-  outline: none;
+  /* outline: none; */
   background-color: transparent;
-  color: var(--color-);
   border: transparent;
   border-bottom: 2px solid var(--color-secondary);
 }
 
+/* ::-webkit-calendar-picker-indicator { 
+  font-size: 1.6rem;
+  background-color: var(--color-secondary);
+  border-radius: 0.5rem; 
+} */
+
 .task-name {
   font-size: 2rem;
-  /* font-weight: 600; */
 }
 
 .task-notes {
   resize: none;
-  min-height: 60px;
+  min-height: 6.5rem;
 }
 
 .task-Name::placeholder {

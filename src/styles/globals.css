@@ -4,6 +4,9 @@
     --color-tertiary: hsl(0, 0%, 93%);
     --color-secondary: hsl(42, 95%, 69%);
     --btn-font-color: hsl(216, 18%, 16%);
+    --light-green: hsl(173, 58%, 34%);
+    --green-bg: hsl(188, 58%, 29%);
+    --dark-border-card: hsl(203, 30%, 26%);
     font-size: 62.5%;
 }
 

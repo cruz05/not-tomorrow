@@ -6,7 +6,7 @@ import "../styles/AddTask.css";
 import "../styles/Task.css";
 
 
-function Home() {
+export default function Home() {
   const [tasks, setTasks] = useState([]);
   const [counter, setCounter] = useState(0);
   const [date, setDate] = useState(new Date().toDateString());
@@ -50,5 +50,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

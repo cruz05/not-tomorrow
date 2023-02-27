@@ -22,45 +22,42 @@ export const AddTask = ({ onAdd, closeModal, task }) => {
   };
 
   return (
-    // <section className="container-create-form">
-      <div className="form-container">
-        <form className="form-task" id="create-task" onSubmit={onSubmit}>
-          <input
-            placeholder="Task Name"
-            type="text"
-            className="task-name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="date"
-            className="task-date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-          />
-          <input
-            type="time"
-            className="task-time"
-            value={time}
-            onChange={(e) => setTime(e.target.value)}
-          />
-          <textarea
-            className="task-notes"
-            placeholder="Notes"
-            value={notes}
-            onChange={(e) => setNotes(e.target.value)}
-          ></textarea>
-          <div className="btn-options">
-            <button className="btn-close" onClick={closeModal}>
-              Cancel
-            </button>
-            <button type="submit" className="btn-submit" form="create-task">
-              Save
-            </button>
-          </div>
-        </form>
-        {/* </> */}
-      </div>
-    // </section>
+    <div className="form-container">
+      <form className="form-task" id="create-task" onSubmit={onSubmit}>
+        <input
+          placeholder="Task Name"
+          type="text"
+          className="task-name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="date"
+          className="task-date"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+        />
+        <input
+          type="time"
+          className="task-time"
+          value={time}
+          onChange={(e) => setTime(e.target.value)}
+        />
+        <textarea
+          className="task-notes"
+          placeholder="Notes"
+          value={notes}
+          onChange={(e) => setNotes(e.target.value)}
+        ></textarea>
+        <div className="btn-options">
+          <button className="btn-close" onClick={closeModal}>
+            Cancel
+          </button>
+          <button type="submit" className="btn-submit" form="create-task">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };

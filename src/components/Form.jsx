@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-export const AddTask = ({ onAdd, closeModal, task }) => {
+export const Form = ({ onAdd, closeModal }) => {
   const [name, setName] = useState("");
   const [date, setDate] = useState(new Date().toJSON().split("T")[0]);
-  const [time, setTime] = useState(new Date().toLocaleTimeString().slice(0, 5));
+  const [time, setTime] = useState(new Date().toLocaleTimeString().split(' ')[0]);
   const [notes, setNotes] = useState("");
 
   const onSubmit = (e) => {

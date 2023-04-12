@@ -1,26 +1,28 @@
-import { AddTask } from "../components/AddTask";
 import { useState, useEffect } from "react";
+import { Form } from "../components/Form";
 import Header from "../components/Header";
 import { TaskList } from "../components/TaskList";
+import useLocalStorage from "../hooks/useLocalStorage";
+import { v4 } from 'uuid'
 import "../styles/AddTask.css";
 import "../styles/Task.css";
 
-
 export default function Home() {
-  const [tasks, setTasks] = useState([]);
-  const [counter, setCounter] = useState(0);
+  const [storedTasks, setStoredTasks] = useLocalStorage({key: 'tasks', initialValue: []})
+  const [tasks, setTasks] = useState(storedTasks || []);
+  const [counter, setCounter] = useState(tasks.length);
   const [date, setDate] = useState(new Date().toDateString());
   const [modal, setModal] = useState(false);
 
   const addTask = (task) => {
-    const id = counter;
-    const newTask = { id, ...task };
+    const newTask = { id: v4(), ...task };
     setTasks([...tasks, newTask]);
     setCounter((prevCount) => prevCount + 1);
   };
 
   useEffect(() => {
     console.log(tasks)
+    setStoredTasks(tasks)
   }, [tasks]);
 
   const closeModal = () => {
@@ -33,7 +35,7 @@ export default function Home() {
       <main>
         <div className="date-display">
           <p className="date">{date}</p>
-          <button className={`btn-create-task ${tasks.length ? '' : 'disabled'}`} onClick={() => setModal(true)}>Create task</button>
+          {tasks.length > 0 && <button className={`btn-create-task`} onClick={() => setModal(true)}>Create task</button>}
         </div>
         <section className="tasks">
           { tasks.length > 0 
@@ -42,10 +44,9 @@ export default function Home() {
             setModal(true)
           }}>+ Add new task</button> }
         </section>
-
-      {modal && (
-        <AddTask onAdd={addTask} closeModal={closeModal} />
-        )}
+        {modal && (
+          <Form onAdd={addTask} closeModal={closeModal} />
+          )}
       </main>
     </div>
   );

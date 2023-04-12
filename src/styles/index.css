@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-inline: auto;
-  width: 65rem;
+  width: 50rem;
 }
 
 header {

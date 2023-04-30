@@ -7,61 +7,44 @@
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   border-radius: 0.4rem;
   padding: 1rem 0;
-  /* background-color: var(--darker-bg); */
 }
 
-.task-card {
-  width: 30rem;
+.card {
   user-select: none;
-  display: grid;
-  column-gap: 1.2rem;
-  grid-template-columns: 1fr 4fr 1fr;
-  place-items: center;
-  padding:1.5rem;
-  border-style: solid;
+  width: 30rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.3rem 2rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  border: solid var(--light-green);
   border-width: 1px 1px 3px 3px;
-  border-color: var(--light-green);
   color: var(--btn-font-color);
   background-color: var(--color-tertiary);
-  border-radius: 0.3rem;
-  font-size: 2rem;
-  cursor: pointer;
 }
 
-.task-data {
+.card-content {
+  flex-grow: 1;
   padding-inline: 0.6rem;
-  justify-self: start;
-}
-/* 
-.task-card:hover {
-  background-color: transparent;
-} */
-
-/* .task-card:hover *{
-  --light-green: hsl(173, 91%, 34%);
-  color: var(--light-green);
-} */
-
-.task-card-name {
-  font-weight: 600;
 }
 
 .inactive {
   text-decoration: line-through;
 }
 
-.inactive-card {
+.card-inactive {
   color: var(--color-tertiary);
   background-color: transparent;
   border-color: var(--color-tertiary);
 }
 
-.task-card-notes {
-  font-size: 0.8rem;
-  font-weight: 400;
+.card-content h3 {
+  font-weight: 600;
+  font-size: 2rem;
 }
 
-.task-card-time {
+.card-content span {
   display: block;
   font-size: 1.2rem;
   font-weight: 600;
@@ -69,18 +52,29 @@
   color: rgb(77, 77, 77);
 }
 
+.card-content p {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
 .edit-icon,
 .status-icon {
+  width: 1.8rem;
   color: hsl(0, 0%, 60%);
   cursor: pointer;
 }
 
 .edit-icon {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
-/* @media (min-width: 900px) {
-  .task-display {
-    width: 55%;
-  }
-} */
+.btn-first-task {
+  width: 100%;
+  padding-block: 7rem;
+  font-size: 1.6rem;
+  border: none;
+  color: var(--color-tertiary);
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid var(--color-secondary);
+}

@@ -1,19 +1,18 @@
-.error-page {
+.error {
     text-align: center;
 }
 
-.error-page h1 {
+.error h1 {
     font-size: 8rem;
     line-height: 1;
 }
 
-.error-page p {
+.error p {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-
-.error-page a {
+.error a {
     font-size: 1.4rem;
     text-decoration: none;
     color: var(--color-secondary);

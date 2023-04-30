@@ -1,0 +1,19 @@
+.header {
+    margin-bottom: 1.7rem;
+}
+
+.header h1 {
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+
+.header span {
+    color: var(--color-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.header p {
+    font-weight: 500;
+    font-size: 4rem;
+}
